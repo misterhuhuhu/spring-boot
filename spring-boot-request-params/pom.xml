@@ -9,31 +9,21 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring-boot-properties</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>Reloading-Properties-Files</module>
-        <module>ConfigurationProperties</module>
-        <module>yaml</module>
-        <module>properties</module>
-        <module>buildproperties</module>
-        <module>value</module>
-        <module>Inject-Property-to-unspring</module>
-        <module>json</module>
-        <module>log</module>
-        <module>multipleyaml</module>
-    </modules>
+    <artifactId>spring-boot-request-params</artifactId>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
         </dependency>
     </dependencies>
 </project>

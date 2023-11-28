@@ -1,4 +1,4 @@
-package log;
+package log.env;
 
 import jakarta.annotation.PostConstruct;
 import org.slf4j.Logger;

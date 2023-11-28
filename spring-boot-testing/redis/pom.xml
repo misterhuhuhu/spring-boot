@@ -5,24 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.mrwho</groupId>
-        <artifactId>spring-boot</artifactId>
+        <artifactId>spring-boot-testing</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring-boot-properties</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>Reloading-Properties-Files</module>
-        <module>ConfigurationProperties</module>
-        <module>yaml</module>
-        <module>properties</module>
-        <module>buildproperties</module>
-        <module>value</module>
-        <module>Inject-Property-to-unspring</module>
-        <module>json</module>
-        <module>log</module>
-        <module>multipleyaml</module>
-    </modules>
+    <artifactId>redis</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -33,7 +20,14 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>it.ozimov</groupId>
+            <artifactId>embedded-redis</artifactId>
+            <version>0.7.3</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>

@@ -1,13 +1,13 @@
-package log;
+package enummapping;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LogPropertiesDemoApplication {
+public class EnumMappingMainApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LogPropertiesDemoApplication.class, args);
+        SpringApplication.run(EnumMappingMainApplication.class, args);
     }
 
 }
