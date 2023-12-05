@@ -39,6 +39,8 @@
         <module>spring-boot-runtime</module>
         <module>spring-boot-actuator/management</module>
         <module>spring-boot-testing</module>
+        <module>spring-caching</module>
+        <module>spring-restdocs-mockmvc</module>
     </modules>
     <properties>
         <java.version>17</java.version>

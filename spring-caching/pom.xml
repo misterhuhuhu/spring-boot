@@ -9,13 +9,11 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring-boot-testing</artifactId>
+    <artifactId>spring-caching</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>exclude</module>
-        <module>linerunner</module>
-        <module>redis</module>
-        <module>spy-and-spybean</module>
+        <module>multiplecachemanager</module>
+        <module>redis-cache</module>
     </modules>
 
     <properties>
@@ -27,7 +25,14 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-cache</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.github.ben-manes.caffeine</groupId>
+            <artifactId>caffeine</artifactId>
+            <version>3.1.8</version>
+        </dependency>
+
+
     </dependencies>
 </project>
