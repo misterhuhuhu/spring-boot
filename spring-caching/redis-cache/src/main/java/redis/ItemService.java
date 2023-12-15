@@ -1,6 +1,8 @@
 package redis;
 
 import lombok.AllArgsConstructor;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +13,7 @@ import java.util.Map;
 
 @Service
 @AllArgsConstructor
-@Cacheable("Item")
+@Cacheable(cacheNames = "ItemService", key = " #root.target.class.name +':' + #root.methodName +':'+ T(java.util.Arrays).toString(#root.args)")
 public class ItemService {
     
     private static final Map<String, Item> items = new HashMap<>() {{
@@ -30,10 +32,11 @@ public class ItemService {
     }
     
     public List<Item> getAllItem() {
+        
         return new ArrayList<>(items.values());
     }
     
-    
+//    @CacheEvict(key = " #root.target.class.name + ':getAllItem:'+T(java.util.Arrays).toString(#root.args)",cacheNames = )
     public Map<String, Item> evict(ItemService itemService) {
         return items;
     }
