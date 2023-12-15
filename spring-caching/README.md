@@ -10,3 +10,5 @@
 - [Setting Time-To-Live Value for Caching](https://www.baeldung.com/spring-setting-ttl-value-cache)
 - [Get All Cached Keys with Caffeine Cache in Spring Boot](https://www.baeldung.com/spring-boot-caffeine-spring-get-all-keys)
 
+
+- 如果内存不存在,则在 cachePutRequest.apply 把缓存写入 

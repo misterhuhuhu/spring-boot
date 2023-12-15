@@ -3,17 +3,17 @@ package redis;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
+import lombok.ToString;
 
 import java.io.Serializable;
 
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
+@Data
 public class Item implements Serializable {
-
-    @Id
-    String id;
-
-    String description;
+    
+    private Integer id;
+    
+    private String description;
 }

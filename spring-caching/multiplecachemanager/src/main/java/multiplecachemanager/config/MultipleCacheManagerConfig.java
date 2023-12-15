@@ -2,6 +2,7 @@ package multiplecachemanager.config;
 
 import com.github.benmanes.caffeine.cache.Caffeine;
 import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.CachingConfigurer;
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.caffeine.CaffeineCacheManager;
@@ -13,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableCaching
-public class MultipleCacheManagerConfig extends CachingConfigurerSupport {
+public class MultipleCacheManagerConfig implements CachingConfigurer {
 
     @Bean
     //@Primary
